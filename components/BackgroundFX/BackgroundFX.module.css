@@ -1,0 +1,61 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: var(--z-bg);
+}
+
+.ambientGradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 90, 31, 0.03), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(255, 90, 31, 0.02), transparent 40%),
+    linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 90, 31, 0.06) 0%,
+    rgba(255, 90, 31, 0.02) 30%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  transition: opacity var(--transition-slow);
+  will-change: transform;
+}
+
+.glowIntense {
+  background: radial-gradient(
+    circle,
+    rgba(255, 90, 31, 0.12) 0%,
+    rgba(255, 90, 31, 0.04) 30%,
+    transparent 70%
+  );
+}
+
+.hotspot {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .glow {
+    width: 400px;
+    height: 400px;
+  }
+}

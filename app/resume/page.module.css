@@ -1,0 +1,127 @@
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.back {
+  margin-bottom: 2.5rem;
+  font-size: 16px;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.contact {
+  font-size: 15px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #000;
+}
+
+.block {
+  margin-bottom: 2rem;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+.blockHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.org {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.date {
+  font-size: 14px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.location {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  font-size: 14px;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.detail {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.detail:last-child {
+  margin-bottom: 0;
+}
+
+.coursework {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+.list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #000;
+}
+
+.list li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .blockHead {
+    flex-direction: column;
+  }
+
+  .date {
+    white-space: normal;
+  }
+}

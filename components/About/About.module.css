@@ -1,0 +1,96 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bio {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.toolbox {
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.toolboxLabel {
+  display: block;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 0.6875rem;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.tool:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.toolIcon {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.toolName {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.tool:hover .toolName {
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .bio {
+    font-size: 1rem;
+  }
+
+  .toolbox {
+    padding: 1.25rem;
+  }
+
+  .tool {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .toolName {
+    font-size: 0.75rem;
+  }
+}

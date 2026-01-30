@@ -1,0 +1,75 @@
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.back {
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
+.article {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.linkWrap {
+  margin-bottom: 2rem;
+  font-size: 15px;
+}
+
+.projectLink {
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 2.25rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+.bodyPara {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+.bodyPara:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+}
