@@ -46,8 +46,7 @@ const hydra: ProjectContent = {
 const carmax: ProjectContent = {
   title: 'CarMax Skye+',
   subtitle: 'Autonomous AI Agent Concept (ICE Capstone Project)',
-  // Upload Project-3.pdf to Google Drive/Dropbox, get share link, then replace the url below:
-link: { url: 'https://example.com/your-project-deck.pdf', label: 'Project deck' },
+  link: { url: 'https://drive.google.com/file/d/1FQchxPprIEfUBola5YQ87dS4wsq2nkki/view?usp=sharing', label: 'Project deck' },
   sections: [
     {
       heading: 'Overview',
