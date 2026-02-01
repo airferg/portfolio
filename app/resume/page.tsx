@@ -29,7 +29,7 @@ export default function ResumePage() {
           </div>
           <p className={styles.location}>Charlottesville, Virginia</p>
           <p className={styles.detail}>
-            B.S. in Commerce, Double Concentration in Information Technology and Finance, Track in Artificial Intelligence and Data Analytics · Computer Science Minor
+            B.S. in Commerce, Double Concentration in Information Technology and Finance, Tracks in AI/Data Analytics and Tech Entrepreneurship · 
           </p>
           <p className={styles.coursework}>
             Relevant Coursework: Product & Project Management, Data Structures & Algorithms, Strategy and Systems Design, Quantitative & Financial Modeling, Management Decision Making, Product Innovation, AI and Data Analytics Applications
