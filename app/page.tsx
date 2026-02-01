@@ -23,7 +23,7 @@ export default function Home() {
       </header>
 
       <section className={styles.section}>
-        <p><strong>About:</strong> I&apos;m a student at the University of Virginia, majoring in Commerce with concentrations in Finance and IT, tracks in AI/Data Analytics, and a minor in Computer Science. Searching for PM programs for Summer 2026.</p>
+        <p><strong>About:</strong> I&apos;m a student at the University of Virginia, majoring in Commerce with concentrations in Finance and IT, tracks in AI/Data Analytics and Tech Entrepreneurship. Searching for Tech/Finance programs for Summer 2026.</p>
       </section>
       <section className={styles.section}>
         <p>Surfing. Muay Thai. BJJ. Film. AI. Currently building Hydra.</p>
