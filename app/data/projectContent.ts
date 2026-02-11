@@ -10,7 +10,7 @@ export type ProjectContent = {
 const hydra: ProjectContent = {
   title: 'HYDRA',
   subtitle: 'Agentic Operating System for Early Stage Founders',
-  link: { url: 'https://f-os.vercel.app/', label: 'View MVP' },
+  link: { url: 'https://hydra-ops.vercel.app/', label: 'View MVP' },
   sections: [
     {
       heading: 'Overview',
