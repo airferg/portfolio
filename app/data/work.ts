@@ -8,20 +8,14 @@ export const work = [
   {
     id: 'vantage',
     title: 'Vantage',
-    company: 'Consumer fintech (formerly Hydra)',
+    company: 'Consumer fintech',
     content: 'Plaid-connected rewards and savings autopilot. Validated, then killed when the numbers showed too little customer value.',
   },
   {
-    id: 'carmax',
-    title: 'CarMax Skye+',
-    company: 'AI agent concept',
-    content: 'Proposed an AI agent concept combining structured workflows with conversational flexibility. Designed flows for trade-in estimation, scheduling, and financing with human handoff triggers.',
-  },
-  {
-    id: 'cville',
-    title: 'City of Charlottesville x UVA ADU Design Library',
-    company: 'Civic digital library',
-    content: 'Led 20 user interviews, wrote the PRD, and built a full-stack MVP delivered to the City of Charlottesville.',
+    id: 'fypquiz',
+    title: 'FYPquiz',
+    company: 'AI study app',
+    content: 'TikTok-style AI quizzes from your study material. 100 users and 20K impressions in 30 days.',
   },
 ] as const
 

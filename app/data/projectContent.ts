@@ -56,7 +56,7 @@ const vantage: ProjectContent = {
       body: 'Vantage started as Hydra, an agentic operating system for early-stage founders, and pivoted into consumer fintech: a Plaid-connected autopilot that analyzed linked bank transactions to find missed rewards, savings opportunities, and personalized recommendations.\n\nI was co-founder and head of product.',
     },
     {
-      heading: 'Origin: Hydra',
+      heading: 'Where It Started',
       body: 'Hydra was built to help founders turn ambiguous goals into executable workflows. I ran discovery with 17 founders and product leaders and built an MVP integrating 18 external services in React, TypeScript, Supabase, and Python.\n\nThe key insight was that founders didn\'t want another dashboard. They wanted decision support they could trust. That lesson carried into Vantage.',
     },
     {
@@ -78,73 +78,29 @@ const vantage: ProjectContent = {
   ],
 }
 
-const carmax: ProjectContent = {
-  title: 'CarMax Skye+',
-  subtitle: 'Autonomous AI Agent Concept (ICE Capstone Project)',
-  link: { url: 'https://drive.google.com/file/d/1FQchxPprIEfUBola5YQ87dS4wsq2nkki/view?usp=sharing', label: 'Project deck' },
+const fypquiz: ProjectContent = {
+  title: 'FYPquiz',
+  subtitle: 'AI Study App (Founder & Developer)',
   sections: [
     {
       heading: 'Overview',
-      body: 'Skye+ was a cross functional capstone project with CarMax focused on improving the car buying and financing experience for younger, budget conscious customers. While the project spanned product, marketing, and finance, I led product strategy and discovery.',
+      body: 'FYPquiz turned study material into short, TikTok-style quizzes. Upload a document, and AI generates quiz questions with spoken commentary in a vertical, swipeable format built for how Gen Z students already consume content.\n\nI designed, built, and launched it solo in May and June 2025.',
     },
     {
-      heading: 'Problem',
-      body: 'Gen Z and younger buyers found the car buying process opaque, stressful, and financially intimidating. Interviews revealed confusion around:\n\n• Tradeoffs between financing options\n• Long term cost implications\n• Trust in recommendations\n\nCarMax wanted to explore whether an AI agent could guide customers through decisions without overwhelming them.',
+      heading: 'Build',
+      body: '• Next.js, TypeScript, and Tailwind on the front end\n• Supabase for auth, Postgres, and audio storage\n• OpenAI for quiz generation, plus AI voice for commentary\n• Saved study sets and instant answer feedback',
     },
     {
-      heading: 'Discovery & Research',
-      body: 'I led user research through empathy interviews and synthesized insights into personas and journey maps. A key insight was that users didn\'t want more information. They wanted confidence.\n\nThis shifted the solution away from static tools toward an interactive agent that could adapt recommendations based on user priorities and constraints.',
+      heading: 'Traction',
+      body: '100 users and 20K impressions in the first 30 days, driven entirely by organic short-form content.',
     },
     {
-      heading: 'Product Strategy',
-      body: 'I applied dual track agile to separate discovery from delivery. My focus was on:\n\n• Defining MVP scope\n• Prioritizing features based on user value and feasibility\n• Establishing success metrics around clarity and decision completion\n\nI worked closely with teammates to align product decisions with marketing positioning and financial viability.',
+      heading: 'Why I Shut It Down',
+      body: 'The product kept breaking. Chaining document parsing, generation, and voice through several third-party APIs made it fragile, and I was spending more time fixing failures than improving the experience. I shut it down rather than keep shipping something unreliable.',
     },
     {
-      heading: 'Solution',
-      body: 'Skye+ was designed as an autonomous AI agent that:\n\n• Collected user constraints and preferences\n• Modeled tradeoffs across price, financing, and ownership costs\n• Delivered explainable recommendations in plain language\n\nI created low fidelity prototypes and experience flows in Miro and Figma to test assumptions before finalizing the concept.',
-    },
-    {
-      heading: 'Outcome & Learnings',
-      body: 'The final concept was pitched to CarMax executives and received strong feedback around clarity and customer empathy. The biggest takeaway was how critical explainability is when AI intersects with financial decisions.',
-    },
-    {
-      heading: "What I'd Do Next",
-      body: '• Pilot the agent with a limited customer segment\n• Instrument decision points to measure drop off and confidence\n• Explore deeper personalization through historical behavior',
-    },
-  ],
-}
-
-const cville: ProjectContent = {
-  title: 'Charlottesville ADU Digital Library',
-  subtitle: 'Affordable Housing Infrastructure Project',
-  sections: [
-    {
-      heading: 'Overview',
-      body: 'This project was a collaboration between the City of Charlottesville, UVA Architecture, and a product management class (January to March 2026). The goal was to build a digital library for ADU (Accessory Dwelling Unit) designs that supports city planners, developers, and residents.\n\nI led 20 user interviews, wrote the PRD, and built the full-stack MVP (Next.js and Supabase), which was delivered to the City of Charlottesville.',
-    },
-    {
-      heading: 'Problem',
-      body: 'Charlottesville faces an affordability crisis driven by rising housing costs and limited supply. The city identified ADUs as a potential solution, but the process to design, approve, and build them was fragmented and inaccessible.\n\nArchitectural designs existed, but there was no usable system to store, navigate, or apply them across stakeholders.',
-    },
-    {
-      heading: 'Stakeholders & Constraints',
-      body: 'This project involved complex stakeholder dynamics:\n\n• Lower income families and renters\n• Homeowners and landowners\n• Architects and builders\n• City planners and regulators\n\nEach group had different incentives, access levels, and technical literacy.',
-    },
-    {
-      heading: 'Product Discovery',
-      body: 'I focused on understanding:\n\n• How non technical users access housing information\n• Where friction occurred in approval and construction workflows\n• What information needed to be standardized versus flexible\n\nInterviews revealed that accessibility and clarity mattered more than feature richness.',
-    },
-    {
-      heading: 'Solution Concept',
-      body: 'The MVP is a digital library that:\n\n• Centralizes ADU schematics and metadata\n• Supports different user views depending on role\n• Balances flexibility with regulatory constraints\n\nRather than building a complex platform, the emphasis was on usability, governance, and long term maintainability.',
-    },
-    {
-      heading: 'Learnings',
-      body: 'This project reinforced how product management changes when:\n\n• Outcomes affect real people, not just users\n• Constraints are political and regulatory\n• Success depends on adoption across institutions',
-    },
-    {
-      heading: "What I'd Do Next",
-      body: '• Test early prototypes with city planners and residents\n• Define ownership and update workflows for long term viability\n• Explore integration with permitting systems',
+      heading: 'What I Took From It',
+      body: '• Reliability is a feature, especially for a product people open daily\n• Fewer, well-tested dependencies beat a longer feature list\n• Organic distribution can get you first users, but retention depends on the product working every time\n• These lessons shaped how I architected Wellhound: one AI interface, evaluation sets, and automated testing before launch',
     },
   ],
 }
@@ -152,8 +108,7 @@ const cville: ProjectContent = {
 const contentBySlug: Record<string, ProjectContent> = {
   wellhound,
   vantage,
-  carmax,
-  cville,
+  fypquiz,
 }
 
 export function getProjectContent(slug: string): ProjectContent | undefined {

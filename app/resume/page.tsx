@@ -79,14 +79,6 @@ const projects: Job[] = [
     ],
   },
   {
-    org: 'CarMax Skye+ (UVA McIntire semester project)',
-    date: 'October 2025 – December 2025',
-    role: 'Product Lead',
-    bullets: [
-      'Led product strategy for an AI financing concept with a 5-person team; built the KPI and financial impact model ($70M NPV) and presented the roadmap to CarMax executives.',
-    ],
-  },
-  {
     org: 'FYPquiz (AI study app)',
     date: 'May 2025 – June 2025',
     role: 'Founder & Developer',
@@ -172,7 +164,7 @@ export default function ResumePage() {
           <strong>Product:</strong> PRDs, customer discovery, roadmap prioritization, experimentation, pricing, unit economics, financial modeling
         </p>
         <p className={styles.detail}>
-          <strong>Interests:</strong> Surfing, Muay Thai, BJJ, Film, AI
+          <strong>Interests:</strong> Surfing, BJJ, Muay Thai, Snowboarding, Live Music, Film
         </p>
       </section>
     </main>
