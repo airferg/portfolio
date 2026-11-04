@@ -7,38 +7,73 @@ export type ProjectContent = {
   sections: ProjectSection[]
 }
 
-const hydra: ProjectContent = {
-  title: 'HYDRA',
-  subtitle: 'Agentic Operating System for Early Stage Founders',
-  link: { url: 'https://hydra-ops.vercel.app/', label: 'View MVP' },
+const wellhound: ProjectContent = {
+  title: 'Wellhound',
+  subtitle: 'At-Home Preventive Dog Health (UVA Darden i.Lab)',
+  link: { url: 'https://www.wellhound.app', label: 'wellhound.app' },
   sections: [
     {
       heading: 'Overview',
-      body: 'Hydra is an AI native operating system designed to help early stage founders turn ambiguous goals, fragmented tools, and noisy advice into clear, executable startup workflows. The core problem I wanted to solve was not organization, but decision paralysis.\n\nI led product discovery, system design, and MVP development end to end.',
+      body: 'Wellhound brings preventive blood work to a dog\'s home. A licensed technician draws blood at the owner\'s door, a partner reference lab runs the panel, a veterinarian reviews the results, and the owner gets a care plan plus an AI assistant that knows their dog\'s history.\n\nI\'m the founder and product lead. I wrote the PRD, ERD, and data flows, designed the database, and built most of the app myself across 100+ pull requests.',
     },
     {
       heading: 'Problem',
-      body: 'Early stage founders are overwhelmed by decisions rather than tasks. Most tools focus on organization or documentation, but founders struggle upstream: what should I do next, and why.\n\nThrough conversations with founders and PMs, I found three recurring pain points:\n\n• Too many tools with no decision logic connecting them\n• Advice is generic and not contextual to the founder\'s stage\n• Roadmaps break down when uncertainty is high and data is incomplete\n\nExisting solutions optimized for tracking, not thinking.',
+      body: 'Dogs hide illness. Owners read early signs as aging, and most disease gets caught late, at the point where it is expensive or untreatable. Annual vet visits are a snapshot, and nobody wants to go to the vet more often.\n\nWhat owners told me they want: keeping their dog healthy for longer, at home, at a price that makes sense, with a verified opinion and no extra hassle.',
     },
     {
-      heading: 'Discovery & Insights',
-      body: 'I conducted over 15 empathy interviews with founders and product managers across different stages. I focused on:\n\n• How decisions were made under uncertainty\n• What information founders trusted\n• Where momentum broke down\n\nKey insight: founders didn\'t want another dashboard. They wanted a thinking partner that could synthesize inputs and suggest direction while preserving human judgment.\n\nThis reframed Hydra from a productivity tool into an agentic decision system.',
+      heading: 'Discovery & Pivot',
+      body: 'I interviewed 30 dog owners (senior-dog owners, at-risk breeds, new owners, and owners who had lost a dog to something found late) and 10 veterinarians.\n\nThe first version was a quarterly mail-in urine and fecal kit. Vets were consistent: blood is where the diagnostic value is. That feedback drove the pivot from mail-in kits to in-home blood testing, with testing panels designed alongside a practicing veterinarian.',
     },
     {
-      heading: 'Product Approach',
-      body: 'I defined the MVP around three principles:\n\n• Context first: the system should understand the founder\'s skills, network, capital, and constraints\n• Decision support, not automation: recommendations over actions\n• Modular architecture: integrate with tools founders already use\n\nI translated these principles into product requirements, roadmap priorities, and success metrics focused on activation and clarity rather than raw usage.',
+      heading: 'Product',
+      body: '• Signup, membership payments, and at-home blood draw booking\n• Results stored against each dog\'s own baseline, with plain-language explanations of every biomarker\n• Vet-reviewed care plans (AI drafts, the vet has the final say)\n• An AI care assistant grounded in the dog\'s record\n• Owners can invite their own vet to receive results and updates',
     },
     {
-      heading: 'System & Architecture (High Level)',
-      body: 'Hydra\'s system design centered around:\n\n• Structured user inputs mapped into internal data models\n• NLP based parsing of goals and constraints\n• Rule based and ML assisted logic to generate roadmap suggestions\n• A modular integration layer built in TypeScript to connect external tools\n\nI made explicit tradeoffs to keep the system explainable rather than over automated at this stage.',
+      heading: 'AI Systems',
+      body: '• Model routing: Claude Haiku handles routine queries and Sonnet handles complex, tool-using workflows. About 75% of requests route to Haiku, cutting estimated inference cost by about 50%\n• Guardrails: the assistant is scoped away from giving veterinary advice and routes clinical questions to a vet\n• Synthetic customer testing: AI testing agents grounded in real dog-owner reviews found 96 pre-launch defects and raised simulated checkout completion by 20 percentage points\n• A reference-linked knowledge base that consolidates Slack, Notion, advisor feedback, and product docs into structured Markdown context for AI-assisted development',
     },
     {
-      heading: 'Outcome & Learnings',
-      body: 'I shipped a working MVP with core integrations and onboarding logic, validated through founder walkthroughs and feedback loops. Early signals showed improved clarity and faster initial momentum, though long term retention remains an open question.\n\nThe biggest learning was that decision products live or die by trust, not features. Transparency in logic mattered more than sophistication.',
+      heading: 'Stack',
+      body: 'Next.js (App Router, TypeScript), Supabase, Stripe, Resend, PostHog, Vercel, Claude API.',
     },
     {
-      heading: "What I'd Do Next",
-      body: '• Add feedback loops to measure recommendation quality\n• Introduce lightweight metrics to track decision confidence\n• Explore hybrid human in the loop workflows for higher stakes decisions',
+      heading: 'Status',
+      body: 'Won a $5K UVA Darden i.Lab grant. Recruited veterinary advisors, built a reference lab partnership, and led a 4-person team preparing a paid November 2026 beta in Charlottesville, Virginia.',
+    },
+    {
+      heading: 'What I\'m Learning',
+      body: '• Regulation shapes the product: who can draw blood, who can interpret it, and how a vet relationship is established decide the architecture before any feature does\n• Operations should be automated unless they literally can\'t be\n• The hardest open question is willingness to pay, which is exactly what the beta is built to test',
+    },
+  ],
+}
+
+const vantage: ProjectContent = {
+  title: 'Vantage',
+  subtitle: 'Consumer Fintech (UVA Darden i.Lab), formerly Hydra',
+  sections: [
+    {
+      heading: 'Overview',
+      body: 'Vantage started as Hydra, an agentic operating system for early-stage founders, and pivoted into consumer fintech: a Plaid-connected autopilot that analyzed linked bank transactions to find missed rewards, savings opportunities, and personalized recommendations.\n\nI was co-founder and head of product.',
+    },
+    {
+      heading: 'Origin: Hydra',
+      body: 'Hydra was built to help founders turn ambiguous goals into executable workflows. I ran discovery with 17 founders and product leaders and built an MVP integrating 18 external services in React, TypeScript, Supabase, and Python.\n\nThe key insight was that founders didn\'t want another dashboard. They wanted decision support they could trust. That lesson carried into Vantage.',
+    },
+    {
+      heading: 'Discovery',
+      body: 'I interviewed 40 potential users and analyzed 122 loyalty and savings programs. Interviews consistently showed avoidance and guilt as the dominant money emotions, low willingness to pay, and rejection of dashboard-style tools.',
+    },
+    {
+      heading: 'What We Built',
+      body: '• A Plaid-connected prototype analyzing real transaction data\n• Detection of missed rewards and savings opportunities\n• Personalized financial recommendations\n• A five-layer financial model for i.Lab demo night',
+    },
+    {
+      heading: 'The Decision',
+      body: 'Financial validation showed the product could save a typical user only $9 to $11 a month against a $25 target. I recommended discontinuing the consumer product rather than keep investing in an offering without enough customer value.',
+    },
+    {
+      heading: 'Learnings',
+      body: '• Validate the value equation before scaling the build\n• Killing a product on evidence is a product decision, not a failure\n• The company, incorporation, and accelerator groundwork carried forward into Wellhound',
     },
   ],
 }
@@ -85,7 +120,7 @@ const cville: ProjectContent = {
   sections: [
     {
       heading: 'Overview',
-      body: 'This project is an ongoing collaboration between the City of Charlottesville, UVA Architecture, and a product management class. The goal is to build a digital library for ADU (Accessory Dwelling Unit) designs that supports city planners, developers, and residents.\n\nI am responsible for product framing, stakeholder analysis, and solution definition.',
+      body: 'This project was a collaboration between the City of Charlottesville, UVA Architecture, and a product management class (January to March 2026). The goal was to build a digital library for ADU (Accessory Dwelling Unit) designs that supports city planners, developers, and residents.\n\nI led 20 user interviews, wrote the PRD, and built the full-stack MVP (Next.js and Supabase), which was delivered to the City of Charlottesville.',
     },
     {
       heading: 'Problem',
@@ -101,7 +136,7 @@ const cville: ProjectContent = {
     },
     {
       heading: 'Solution Concept',
-      body: 'The proposed solution is a digital library that:\n\n• Centralizes ADU schematics and metadata\n• Supports different user views depending on role\n• Balances flexibility with regulatory constraints\n\nRather than building a complex platform, the emphasis was on usability, governance, and long term maintainability.',
+      body: 'The MVP is a digital library that:\n\n• Centralizes ADU schematics and metadata\n• Supports different user views depending on role\n• Balances flexibility with regulatory constraints\n\nRather than building a complex platform, the emphasis was on usability, governance, and long term maintainability.',
     },
     {
       heading: 'Learnings',
@@ -115,7 +150,8 @@ const cville: ProjectContent = {
 }
 
 const contentBySlug: Record<string, ProjectContent> = {
-  hydra,
+  wellhound,
+  vantage,
   carmax,
   cville,
 }

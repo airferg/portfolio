@@ -23,10 +23,10 @@ export default function Home() {
       </header>
 
       <section className={styles.section}>
-        <p><strong>About:</strong> I&apos;m a student at the University of Virginia, majoring in Commerce with concentrations in Finance and IT, tracks in AI/Data Analytics and Tech Entrepreneurship. Searching for Tech/Finance programs for Summer 2026.</p>
+        <p><strong>About:</strong> I&apos;m a fourth-year at the University of Virginia&apos;s McIntire School of Commerce (IT &amp; Finance, AI &amp; Data Analytics, Engineering Business minor), graduating May 2027. Founder of <a href="https://www.wellhound.app" target="_blank" rel="noopener noreferrer">Wellhound</a>. Looking for full-time product roles starting 2027.</p>
       </section>
       <section className={styles.section}>
-        <p>Surfing. Muay Thai. BJJ. Film. AI. Currently building Hydra.</p>
+        <p>Surfing. Muay Thai. BJJ. Film. AI. Currently building Wellhound.</p>
       </section>
 
       <section className={styles.section}>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       <section className={styles.section}>
-        <p><strong>Connect:</strong> <a href="mailto:wesmccoy23@gmail.com">Email</a>, <a href="https://www.linkedin.com/in/mccoyferguson" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <Link href="/resume">Resume</Link></p>
+        <p><strong>Connect:</strong> <a href="mailto:wesmccoy23@gmail.com">Email</a>, <a href="https://www.linkedin.com/in/mccoyferguson" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://github.com/airferg" target="_blank" rel="noopener noreferrer">GitHub</a>, <Link href="/resume">Resume</Link></p>
       </section>
 
       <footer className={styles.footer}>

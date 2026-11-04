@@ -3,7 +3,113 @@ import type { Metadata } from 'next'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Resume — McCoy Ferguson',
+  title: 'Resume | McCoy Ferguson',
+}
+
+type Job = {
+  org: string
+  date: string
+  role: string
+  location?: string
+  bullets: string[]
+}
+
+const experience: Job[] = [
+  {
+    org: 'Wellhound (at-home preventive dog health, UVA Darden i.Lab)',
+    date: 'June 2026 – Present',
+    role: 'Founder & Product Lead',
+    location: 'Charlottesville, Virginia',
+    bullets: [
+      'Owned product specs, database design, and full-stack development of signup, payments, blood draw booking, vet-reviewed lab results, and an AI care assistant across 100+ pull requests.',
+      'Interviewed 30 dog owners and 10 veterinarians; translated customer feedback into a pivot from mail-in urine kits to in-home blood testing.',
+      'Architected a model-routed AI assistant using Claude Haiku for routine queries and Sonnet for complex, tool-using workflows; ~75% of requests route to Haiku, reducing estimated inference costs ~50%.',
+      'Developed AI customer-testing agents grounded in real dog-owner reviews to identify 96 pre-launch defects and improve simulated checkout completion by 20 percentage points.',
+      'Engineered a reference-linked knowledge base consolidating Slack, Notion, advisor feedback, and product documentation into structured Markdown context for AI development workflows.',
+      'Led a 4-person team preparing a paid November 2026 Charlottesville beta; secured a $5K UVA Darden grant and recruited veterinary advisors to develop testing panels.',
+    ],
+  },
+  {
+    org: 'Vantage Financial Technologies (consumer fintech, UVA Darden i.Lab)',
+    date: 'December 2025 – May 2026',
+    role: 'Co-Founder & Head of Product',
+    location: 'Charlottesville, Virginia',
+    bullets: [
+      'Built a Plaid-connected fintech prototype analyzing linked bank transactions to identify missed rewards, savings opportunities, and personalized financial recommendations.',
+      'Interviewed 40 potential users and analyzed 122 loyalty and savings programs; found the product could save a typical user only $9–$11 per month against a $25 target.',
+      'Recommended discontinuing the consumer product after financial validation revealed insufficient customer value, avoiding further investment in an unviable offering.',
+    ],
+  },
+  {
+    org: 'Vester (crypto analytics startup)',
+    date: 'October 2025 – November 2025',
+    role: 'Product Strategy Intern',
+    location: 'Remote',
+    bullets: [
+      'Analyzed 9 competing crypto analytics platforms across product features, identifying an underserved market opportunity that informed product positioning.',
+    ],
+  },
+  {
+    org: 'Davenport & Company (wealth management)',
+    date: 'June 2025 – August 2025',
+    role: 'Financial Sales Intern',
+    location: 'Richmond, Virginia',
+    bullets: [
+      'Supported a $500M+ AUM wealth management practice serving 80 high-net-worth clients by digitizing client records and gaining exposure to financial services operations.',
+    ],
+  },
+  {
+    org: 'Fifty Knots (pre-seed and seed venture capital)',
+    date: 'May 2024 – July 2024',
+    role: 'Venture Capital Analyst Intern',
+    location: 'Cape Town, South Africa',
+    bullets: [
+      'Developed subscription pricing for a portfolio company selling to retailers, modeling per-store monthly fees and volume-based discounts.',
+    ],
+  },
+]
+
+const projects: Job[] = [
+  {
+    org: 'Affordable Housing Digital Library (UVA & City of Charlottesville)',
+    date: 'January 2026 – March 2026',
+    role: 'Product Engineer',
+    bullets: [
+      'Led 20 user interviews, authored the PRD, and developed a full-stack MVP delivered to the City of Charlottesville.',
+    ],
+  },
+  {
+    org: 'CarMax Skye+ (UVA McIntire semester project)',
+    date: 'October 2025 – December 2025',
+    role: 'Product Lead',
+    bullets: [
+      'Led product strategy for an AI financing concept with a 5-person team; built the KPI and financial impact model ($70M NPV) and presented the roadmap to CarMax executives.',
+    ],
+  },
+  {
+    org: 'FYPquiz (AI study app)',
+    date: 'May 2025 – June 2025',
+    role: 'Founder & Developer',
+    bullets: [
+      'Built and launched an AI study app using Next.js, OpenAI, and Supabase; acquired 100 users and generated 20K impressions in 30 days.',
+    ],
+  },
+]
+
+function Entry({ job }: { job: Job }) {
+  return (
+    <div className={styles.block}>
+      <div className={styles.blockHead}>
+        <span className={styles.org}>{job.org}</span>
+        <span className={styles.date}>{job.date}</span>
+      </div>
+      {job.location && <p className={styles.location}>{job.location}</p>}
+      <p className={styles.role}>{job.role}</p>
+      {job.bullets.map((b, i) => (
+        <p key={i} className={styles.detail}>{b}</p>
+      ))}
+    </div>
+  )
 }
 
 export default function ResumePage() {
@@ -16,12 +122,14 @@ export default function ResumePage() {
       <header className={styles.header}>
         <h1 className={styles.name}>Wesley McCoy Ferguson</h1>
         <p className={styles.contact}>
-          Richmond, VA · (804) 380-9149 · <a href="mailto:wesmccoy23@gmail.com">wesmccoy23@gmail.com</a>
+          Charlottesville, VA · (804) 380-9149 · <a href="mailto:wesmccoy23@gmail.com">wesmccoy23@gmail.com</a>
         </p>
         <p className={styles.contact}>
           <a href="https://www.wesmccoy.com/" target="_blank" rel="noopener noreferrer">wesmccoy.com</a>
           {' · '}
           <a href="https://www.linkedin.com/in/mccoyferguson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          {' · '}
+          <a href="https://github.com/airferg" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
       </header>
 
@@ -29,108 +137,44 @@ export default function ResumePage() {
         <h2 className={styles.sectionTitle}>Education</h2>
         <div className={styles.block}>
           <div className={styles.blockHead}>
-            <span className={styles.org}>University of Virginia — McIntire School of Commerce</span>
+            <span className={styles.org}>University of Virginia, McIntire School of Commerce</span>
             <span className={styles.date}>May 2027 (Expected)</span>
           </div>
           <p className={styles.location}>Charlottesville, Virginia</p>
           <p className={styles.detail}>
-            B.S. in Commerce (Information Technology and Finance), Track in AI / Data Analytics, Engineering Business Minor
+            B.S. Commerce, IT &amp; Finance and AI &amp; Data Analytics Concentrations, Engineering Business Minor
           </p>
           <p className={styles.coursework}>
-            Relevant Coursework: Product & Project Management, Data Structures & Algorithms, New Product Development, Topics in Business Analytics — ML/AI with Python, Full-Stack Software Engineering
+            Relevant Coursework: AI Product Management, Data Management for Decision Making (SQL), Intermediate Investments, New Product Development
           </p>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Professional Experience</h2>
+        <h2 className={styles.sectionTitle}>Experience</h2>
+        {experience.map((job) => <Entry key={job.org} job={job} />)}
+      </section>
 
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>Hydra — Agentic Operating System for Early-Stage Founders</span>
-            <span className={styles.date}>November 2025 – Present</span>
-          </div>
-          <p className={styles.role}>Product Engineer</p>
-          <p className={styles.detail}>
-            Built early MVP integrating 18 external services using React, TypeScript, Supabase, and Python to prototype an agentic operating system. Ran discovery and usability testing with 17 founders and product leaders, translating feedback into system architecture and feature roadmap. Led full stack development and product execution from prototype through MVP, coordinating architecture, testing, and iteration cycles.
-          </p>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>City of Charlottesville x UVA McIntire — Affordable Housing Digital Library</span>
-            <span className={styles.date}>January 2026 – Present</span>
-          </div>
-          <p className={styles.role}>Product Manager (Student)</p>
-          <p className={styles.detail}>
-            Conducted 20 interviews across 3 housing segments to define product requirements, producing 3 personas and 1 PRD that guided system design for city housing planners. Built full stack MVP using Next.js and Supabase, designing database schema, tagging, and manual search indexing to structure citywide housing blueprint library. Translated user research into product architecture adopted by the City of Charlottesville to support future affordable housing development.
-          </p>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>Blockchain @ UVA Investment Fund</span>
-            <span className={styles.date}>October 2025 – Present</span>
-          </div>
-          <p className={styles.location}>Charlottesville, Virginia</p>
-          <p className={styles.role}>Investment Associate</p>
-          <p className={styles.detail}>
-            Conduct technical and product analysis of Web3 protocols and crypto startups, evaluating on-chain data, token economics, protocol architecture, and incentive mechanisms to inform real-money investment decisions across a $300K portfolio.
-          </p>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>CarMax Skye+ — UVA McIntire Semester Project</span>
-            <span className={styles.date}>October 2025 – December 2025</span>
-          </div>
-          <p className={styles.role}>Product Lead (Student)</p>
-          <p className={styles.detail}>
-            Led product strategy for AI financing platform with 5 person team, defining MVP and prioritizing 4 core features targeting Gen Z buyers. Built KPI and financial impact model projecting $70M NPV and 692% IRR to evaluate product viability. Designed go to market and experimentation plan forecasting 1306% ROI and presented product roadmap to executive stakeholders.
-          </p>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>Vesterai</span>
-            <span className={styles.date}>September 2025 – November 2025</span>
-          </div>
-          <p className={styles.location}>Boston, Massachusetts</p>
-          <p className={styles.role}>Product Strategy Intern</p>
-          <p className={styles.detail}>
-            Supported product and go-to-market strategy for an AI-driven fintech platform by building financial and unit economics models, analyzing competitive products, and evaluating pricing, onboarding, and distribution tradeoffs used in investor and roadmap discussions with founders.
-          </p>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className={styles.org}>Fifty Knots Venture Capital</span>
-            <span className={styles.date}>May 2024 – July 2024</span>
-          </div>
-          <p className={styles.location}>Cape Town, South Africa</p>
-          <p className={styles.role}>Venture Capital Analyst Intern</p>
-          <p className={styles.detail}>
-            Built comprehensive financial models adopted by management forecasting over $26M in annual revenue for a high growth startup, including 3-statement projections and ROI sensitivity analyses.
-          </p>
-          <p className={styles.detail}>
-            Evaluated and presented strategic entry into the U.S. and South African markets to guide expansion and investor positioning.
-          </p>
-        </div>
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Projects</h2>
+        {projects.map((job) => <Entry key={job.org} job={job} />)}
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Skills</h2>
         <p className={styles.detail}>
-          <strong>Product & Strategy:</strong> Product Discovery, Dual Track Agile, Roadmapping, Feature Prioritization, MVP Definition, User Research, Stakeholder Management, Product Lifecycle Management
+          <strong>AI:</strong> Multi-agent workflows, context engineering, LLM evaluation, model routing, synthetic user testing, Claude API
         </p>
         <p className={styles.detail}>
-          <strong>Technical Skills:</strong> JavaScript (React / TypeScript), Python (ML/AI), SQL, Data Modeling
+          <strong>Engineering &amp; Data:</strong> TypeScript, Python, SQL (SQL Server, MySQL), R, Power BI, Next.js, Swift/SwiftUI, Supabase, Stripe, Plaid API, PostHog, Figma
         </p>
         <p className={styles.detail}>
-          <strong>Personal interests:</strong> Sociology, Artificial Intelligence, Surfing, Snowboarding, Running, Travel, Pickleball
+          <strong>Product:</strong> PRDs, customer discovery, roadmap prioritization, experimentation, pricing, unit economics, financial modeling
+        </p>
+        <p className={styles.detail}>
+          <strong>Interests:</strong> Surfing, Muay Thai, BJJ, Film, AI
         </p>
       </section>
-
     </main>
   )
 }
