@@ -21,6 +21,20 @@
   letter-spacing: 0.02em;
 }
 
+.headline {
+  font-size: 15px;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.additional {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 0;
+}
+
 .contact {
   font-size: 15px;
   color: #000;
