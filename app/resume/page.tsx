@@ -63,6 +63,16 @@ const experience: Job[] = [
 
 const projects: Job[] = [
   {
+    org: 'Rumil (personal AI memory app for macOS, creator)',
+    date: 'Nov 2026 – Present',
+    role: '',
+    bullets: [
+      'Eliminated re-explaining personal context to each AI by shipping a local-first macOS app that gives Claude, ChatGPT, and Perplexity one reference-linked knowledge base over MCP.',
+      'Cut each assistant\'s per-session memory overhead ~70% (1,900 to 600 tokens) by designing a retrieval router that resolves names on-device and returns only the relevant lines.',
+      'Closed a credential-leak risk found in testing by adding secret redaction and limiting internet access to memory tools only.',
+    ],
+  },
+  {
     org: 'FYPquiz (AI study app, founder & developer)',
     date: 'May 2025 – Jun 2025',
     role: '',
@@ -97,7 +107,7 @@ export default function ResumePage() {
 
       <header className={styles.header}>
         <h1 className={styles.name}>Wesley McCoy Ferguson</h1>
-        <p className={styles.headline}>Founder &amp; Product Builder</p>
+        <p className={styles.headline}>Product Builder</p>
         <p className={styles.contact}>
           Charlottesville, VA · Open to relocating after May 2027 graduation · (804) 380-9149 · <a href="mailto:wesmccoy23@gmail.com">wesmccoy23@gmail.com</a>
         </p>
@@ -142,7 +152,7 @@ export default function ResumePage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Skills</h2>
         <p className={styles.detail}>
-          <strong>AI:</strong> Claude Code, Claude API, model routing, AI agent testing
+          <strong>AI:</strong> Claude Code, Claude API, MCP servers, model routing, retrieval, AI agent testing
         </p>
         <p className={styles.detail}>
           <strong>Engineering &amp; Data:</strong> TypeScript, Python, Next.js, SQL, PostgreSQL (Supabase, row-level security), data modeling (ERD), REST APIs and webhooks (Stripe, Plaid), Swift/SwiftUI, Power BI, PostHog, Figma
