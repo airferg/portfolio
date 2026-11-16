@@ -78,6 +78,38 @@ const vantage: ProjectContent = {
   ],
 }
 
+const rumil: ProjectContent = {
+  title: 'Rumil',
+  subtitle: 'Personal AI Memory for macOS (Creator)',
+  link: { url: 'https://github.com/airferg/rumil', label: 'github.com/airferg/rumil' },
+  sections: [
+    {
+      heading: 'Overview',
+      body: 'Rumil is a Mac app that gives every AI assistant I use the same memory. It keeps my context as linked Markdown files on my own computer and serves it to Claude, ChatGPT, and Perplexity over MCP (Model Context Protocol).\n\nI designed it and built it with Claude Code in November 2026: I made the product and architecture decisions, and AI wrote most of the code.',
+    },
+    {
+      heading: 'Problem',
+      body: 'Every assistant starts from zero. Claude remembers what I tell Claude, ChatGPT remembers what I tell ChatGPT, and none of them see my email, texts, calendar, notes, or the meetings where most of my context actually lives. I was re-explaining myself in every chat.',
+    },
+    {
+      heading: 'What It Does',
+      body: '• Pulls context in automatically: Gmail and Calendar, iMessage, Apple Notes, Obsidian, calendar links (Canvas, Outlook), news feeds, iPhone locations, voice memos, and meeting recordings transcribed on-device\n• Copies my full ChatGPT, Claude, and Perplexity history through a Chrome extension, including chats from my phone\n• Adds relevant context to prompts in the browser, only when the prompt is about me\n• Shows everything as a rotatable globe of linked notes, people, and projects\n• Runs a local model (Ollama) for anything too private to send to a cloud AI',
+    },
+    {
+      heading: 'Key Decisions',
+      body: '• Token cost over completeness: the first version made assistants search several times per question and spent about 15K tokens on one answer. I redesigned it around a router that resolves names and returns only the relevant lines, cutting per-session overhead from about 1,900 to 600 tokens\n• Security after a real finding: a test showed API keys from one of my notes coming back in a search. I added secret redaction across search and reads, a key-rotation flow, and locked the internet tunnel to the memory tools only\n• Local first: notes stay as files on my Mac, private folders can be hidden from every assistant, and a local model handles private summaries',
+    },
+    {
+      heading: 'Stack',
+      body: 'Electron, Node.js, MCP SDK, MiniSearch, SQLite (iMessage), whisper.cpp, Ollama, Chrome extension (Manifest V3), ngrok. Nearly 300 automated tests.',
+    },
+    {
+      heading: 'What I\'m Learning',
+      body: '• Memory is a retrieval problem, not a storage problem: having everything is worthless if the assistant has to dig\n• Every tool an AI can call costs tokens before it is ever used, so fewer, smarter tools win\n• The assistant decides when to look things up, so the rules for when to check memory matter as much as the memory itself',
+    },
+  ],
+}
+
 const fypquiz: ProjectContent = {
   title: 'FYPquiz',
   subtitle: 'AI Study App (Founder & Developer)',
@@ -108,6 +140,7 @@ const fypquiz: ProjectContent = {
 const contentBySlug: Record<string, ProjectContent> = {
   wellhound,
   vantage,
+  rumil,
   fypquiz,
 }
 

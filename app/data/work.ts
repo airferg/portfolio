@@ -12,6 +12,12 @@ export const work = [
     content: 'Plaid-connected rewards and savings autopilot. Validated, then killed when the numbers showed too little customer value.',
   },
   {
+    id: 'rumil',
+    title: 'Rumil',
+    company: 'Personal AI memory for macOS',
+    content: 'One local memory shared by Claude, ChatGPT, and Perplexity, built from my email, messages, notes, calendar, and past AI chats.',
+  },
+  {
     id: 'fypquiz',
     title: 'FYPquiz',
     company: 'AI study app',
